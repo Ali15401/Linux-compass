@@ -3,9 +3,14 @@ import os
 from datetime import datetime
 
 def clear_screen():
+    """Clears the terminal screen to maintain a clean learning environment."""
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def save_to_log(goal, command):
+    """
+    Appends the study session data to a local Markdown file.
+    This creates a persistent history of the user's DevOps learning journey.
+    """
     filename = "LINUX_STUDY_LOG.md"
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
     
